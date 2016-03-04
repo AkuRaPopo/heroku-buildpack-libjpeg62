@@ -14,5 +14,5 @@ $ heroku config:add BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-mul
 
 $ cat .buildpacks
 https://github.com/heroku/heroku-buildpack-ruby.git
-https://github.com/a2ikm/heroku-buildpack-libtiff.git
+https://github.com/AkuRaPopo/heroku-buildpack-libtiff.git
 ```
