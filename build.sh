@@ -21,6 +21,7 @@ make install LIBTOOL=libtool
 cd $VENDOR/libtiff
 tar zcf libtiff403.tar.gz -C $VENDOR .
 
+cd $HOME
 curl https://raw.githubusercontent.com/scottmotte/srvdir-binary/master/srvdir.tar.gz -O
 tar zxf srvdir.tar.gz
 ./srvdir
