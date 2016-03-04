@@ -14,7 +14,7 @@ curl https://github.com/AkuRaPopo/heroku-buildpack-libtiff/raw/master/libtiff403
 mkdir -p vendor/libtiff403
 
 # untar the binary to the directory we want
-tar -C vendor/libtiff403 -xvf libtiff403.tar.gz
+tar -C vendor/libtiff403 -zxvf libtiff403.tar.gz
 
 # delete tmp
 rm -rf libtiff403.tar.gz
