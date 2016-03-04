@@ -8,11 +8,11 @@ mkdir -p $PREFIX/include
 mkdir -p $PREFIX/man/man1
 
 # Download tiff dependency
-curl http://download.osgeo.org/libtiff/tiff-4.0.3.tar.gz -o libtiff.tar.gz
+curl http://download.osgeo.org/libtiff/tiff-3.9.7.zip -o libtiff.tar.gz
 # Unzip
 tar -xvf libtiff.tar.gz
 # Get into libtiff folder
-cd tiff-4.0.3
+cd tiff-3.9.7
 
 ./configure --prefix=$PREFIX --enable-shared --enable-static
 make LIBTOOL=libtool
