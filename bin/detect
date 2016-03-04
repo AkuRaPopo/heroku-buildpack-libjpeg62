@@ -1,5 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
+# bin/detect <build-dir>
 
-# this pack is valid for all apps
 echo "libtiff"
 exit 0
