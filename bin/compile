@@ -1,23 +1,20 @@
-#!/bin/sh
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+export OUT_PATH=/app/vendor/libtiff
 
-indent() {
-  sed -u 's/^/       /'
-}
+echo "-----> Installing libtiff"
 
-echo "-----> Install libtiff"
-BUILD_DIR=$1
-VENDOR_DIR="vendor"
-DOWNLOAD_URL="https://github.com/AkuRaPopo/heroku-buildpack-libtiff/raw/master/libtiff403.tar.gz"
+# change to the the BUILD_DIR ($1)
+cd $1
 
-echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
+# download the mruby binary (-O) silently (-s)
+curl https://github.com/AkuRaPopo/heroku-buildpack-libtiff/raw/master/libtiff403.tar.gz -s -O
 
-cd $BUILD_DIR
-mkdir -p $VENDOR_DIR
-cd $VENDOR_DIR
-curl -L --silent $DOWNLOAD_URL | tar xz
+# make a directory to untar (like unzip) the binary
+mkdir -p vendor/libtiff
 
-echo "exporting PATH and LIBRARY_PATH" | indent
-PROFILE_PATH="$BUILD_DIR/.profile.d/libtiff.sh"
-mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:$HOME/vendor/libtiff/bin"' >> $PROFILE_PATH
-echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/libtiff/lib"' >> $PROFILE_PATH
+# untar the binary to the directory we want
+tar -C vendor/libtiff -xvf libtiff403.tar.gz
+
+# delete tmp
+rm -rf libtiff403.tar.gz
