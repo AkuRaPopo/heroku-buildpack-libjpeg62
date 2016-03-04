@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
-export OUT_PATH=/app/vendor/libtiff
+export OUT_PATH=/app/vendor/libtiff403
 
-echo "-----> Installing libtiff"
+echo "-----> Installing libtiff403"
 
 # change to the the BUILD_DIR ($1)
 cd $1
@@ -11,10 +11,10 @@ cd $1
 curl https://github.com/AkuRaPopo/heroku-buildpack-libtiff/raw/master/libtiff403.tar.gz -s -O
 
 # make a directory to untar (like unzip) the binary
-mkdir -p vendor/libtiff
+mkdir -p vendor/libtiff403
 
 # untar the binary to the directory we want
-tar -C vendor/libtiff -xvf libtiff403.tar.gz
+tar -C vendor/libtiff403 -xvf libtiff403.tar.gz
 
 # delete tmp
 rm -rf libtiff403.tar.gz
