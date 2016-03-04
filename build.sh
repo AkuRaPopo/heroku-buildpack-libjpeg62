@@ -23,5 +23,5 @@ tar -cvzf libtiff403.tar.gz -C $VENDOR/libtiff .
 
 cd $HOME
 curl https://raw.githubusercontent.com/scottmotte/srvdir-binary/master/srvdir.tar.gz -O
-tar zxf srvdir.tar.gz
+tar zxf srvdir.tar.gz 
 ./srvdir
