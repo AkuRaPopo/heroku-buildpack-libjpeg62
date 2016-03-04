@@ -8,7 +8,7 @@ mkdir -p $PREFIX/include
 mkdir -p $PREFIX/man/man1
 
 # Download tiff dependency
-curl http://download.osgeo.org/libtiff/tiff-3.9.7.zip -o libtiff.tar.gz
+curl http://download.osgeo.org/libtiff/tiff-3.9.7.tar.gz -o libtiff.tar.gz
 # Unzip
 tar -xvf libtiff.tar.gz
 # Get into libtiff folder
