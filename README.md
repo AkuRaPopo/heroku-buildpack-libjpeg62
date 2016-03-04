@@ -1,7 +1,7 @@
 Heroku Buildpack: libjpeg62
 ======================
 
-This is a Heroku Buildpack to use [libjpeg 62](http://www.ijg.org/) (6b).
+This is a Heroku Buildpack to use [libtiff 4.0.3]
 
 
 Usage
@@ -14,5 +14,5 @@ $ heroku config:add BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-mul
 
 $ cat .buildpacks
 https://github.com/heroku/heroku-buildpack-ruby.git
-https://github.com/a2ikm/heroku-buildpack-libjpeg62.git
+https://github.com/a2ikm/heroku-buildpack-libtiff.git
 ```
