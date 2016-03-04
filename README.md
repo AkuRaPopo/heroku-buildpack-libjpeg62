@@ -1,4 +1,4 @@
-Heroku Buildpack: libjpeg62
+Heroku Buildpack: libtiff
 ======================
 
 This is a Heroku Buildpack to use [libtiff 4.0.3]
