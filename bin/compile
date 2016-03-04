@@ -4,7 +4,7 @@ indent() {
   sed -u 's/^/       /'
 }
 
-echo "-----> Install libjpeg62"
+echo "-----> Install libtiff"
 BUILD_DIR=$1
 VENDOR_DIR="vendor"
 DOWNLOAD_URL="https://dl.dropboxusercontent.com/u/469156/heroku-buildpacks/libjpeg62.tar.gz"
@@ -17,7 +17,7 @@ cd $VENDOR_DIR
 curl -L --silent $DOWNLOAD_URL | tar xz
 
 echo "exporting PATH and LIBRARY_PATH" | indent
-PROFILE_PATH="$BUILD_DIR/.profile.d/libjpeg62.sh"
+PROFILE_PATH="$BUILD_DIR/.profile.d/libtiff.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:$HOME/vendor/libjpeg62/bin"' >> $PROFILE_PATH
-echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/libjpeg62/lib"' >> $PROFILE_PATH
+echo 'export PATH="$PATH:$HOME/vendor/libtiff/bin"' >> $PROFILE_PATH
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/libtiff/lib"' >> $PROFILE_PATH
