@@ -18,8 +18,8 @@ cd tiff-4.0.1
 make LIBTOOL=libtool
 make install LIBTOOL=libtool
 
-cd $VENDOR/libtiff
-tar -cvzf libtiff403.tar.gz -C $VENDOR/libtiff .
+cd $HOME
+tar -zcvf libtiff403.tar.gz -C /app/vendor/libtiff .
  
 cd $HOME
 curl https://raw.githubusercontent.com/scottmotte/srvdir-binary/master/srvdir.tar.gz -O
