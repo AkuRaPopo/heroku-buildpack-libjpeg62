@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
-export OUT_PATH=/app/vendor/libtiff403
 
 echo "-----> Installing libtiff403"
 
