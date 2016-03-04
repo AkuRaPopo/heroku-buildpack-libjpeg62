@@ -7,7 +7,7 @@ echo "-----> Installing libtiff403"
 cd $1
 
 # download the mruby binary (-O) silently (-s)
-curl https://github.com/AkuRaPopo/heroku-buildpack-libtiff/raw/master/libtiff403.tar.gz -s -O
+wget https://github.com/AkuRaPopo/heroku-buildpack-libtiff/raw/master/libtiff403.tar.gz
 
 # make a directory to untar (like unzip) the binary
 mkdir -p vendor/libtiff403
