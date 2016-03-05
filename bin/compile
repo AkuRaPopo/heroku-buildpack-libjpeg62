@@ -18,8 +18,7 @@ tar -C vendor/libtiff403 -zxvf libtiff403.tar.gz
 # delete tmp
 rm -rf libtiff403.tar.gz
 
-# link
-cd $HOME
-ln -s $HOME/vendor/libtiff403/lib/libtiff.so $HOME/libtiff.so.4
+# link 
+ln -s vendor/libtiff403/lib/libtiff.so $HOME/libtiff.so.4
 
 
